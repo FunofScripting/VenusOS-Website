@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NovaOS — Twój wirtualny komputer</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #080b12;
+            color: white;
+        }
+
+        /* ===== PASEK ===== */
+
+        nav {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 7%;
+            background: #0d111b;
+            border-bottom: 1px solid #202838;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #62a8ff;
+        }
+
+        nav a {
+            color: #ddd;
+            text-decoration: none;
+            margin-left: 25px;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            color: #62a8ff;
+        }
+
+        /* ===== HERO ===== */
+
+        .hero {
+            min-height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(50px, 9vw, 100px);
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #62a8ff;
+        }
+
+        .hero p {
+            font-size: 22px;
+            color: #aeb7c8;
+            max-width: 650px;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .button {
+            padding: 15px 25px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .primary {
+            background: #62a8ff;
+            color: #06101f;
+        }
+
+        .secondary {
+            border: 1px solid #3b465a;
+            color: white;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+        }
+
+        /* ===== SEKCJE ===== */
+
+        section {
+            padding: 80px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 38px;
+            margin-bottom: 45px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #101621;
+            border: 1px solid #202b3d;
+            border-radius: 15px;
+            padding: 30px;
+            transition: 0.25s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #62a8ff;
+        }
+
+        .card .icon {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #aeb7c8;
+            line-height: 1.6;
+        }
+
+        /* ===== DOWNLOAD ===== */
+
+        .download {
+            text-align: center;
+            background: #0d111b;
+        }
+
+        .version {
+            color: #8d99ad;
+            margin: 15px 0 25px;
+        }
+
+        /* ===== STOPKA ===== */
+
+        footer {
+            text-align: center;
+            padding: 35px;
+            color: #727d90;
+            border-top: 1px solid #202838;
+        }
+
+        @media (max-width: 700px) {
+            nav {
+                padding: 0 20px;
+            }
+
+            nav div:last-child {
+                display: none;
+            }
+
+            .hero {
+                min-height: 500px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== MENU ===== -->
+
+    <nav>
+        <div class="logo">◈ NovaOS</div>
+
+        <div>
+            <a href="#features">Funkcje</a>
+            <a href="#download">Pobieranie</a>
+            <a href="https://github.com/" target="_blank">GitHub</a>
+        </div>
+    </nav>
+
+
+    <!-- ===== GŁÓWNA SEKCJA ===== -->
+
+    <header class="hero">
+
+        <h1>Nova<span>OS</span></h1>
+
+        <p>
+            Twój własny wirtualny komputer.
+            Aplikacje, pliki, NovaEdge, NovaDefender
+            i wiele więcej — w jednym miejscu.
+        </p>
+
+        <div class="buttons">
+
+            <a class="button primary" href="#download">
+                Pobierz NovaOS
+            </a>
+
+            <a class="button secondary"
+               href="https://github.com/"
+               target="_blank">
+                Zobacz GitHub
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- ===== FUNKCJE ===== -->
+
+    <section id="features">
+
+        <h2 class="section-title">
+            Co oferuje NovaOS?
+        </h2>
+
+        <div class="features">
+
+            <div class="card">
+                <div class="icon">🖥️</div>
+                <h3>Wirtualny komputer</h3>
+                <p>
+                    Kompletny wirtualny pulpit z aplikacjami,
+                    plikami i własnym systemem.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🌐</div>
+                <h3>NovaEdge</h3>
+                <p>
+                    Integracja z Microsoft Edge
+                    bezpośrednio z NovaOS.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🛡️</div>
+                <h3>NovaDefender</h3>
+                <p>
+                    Wirtualna ochrona systemu
+                    przed symulowanymi zagrożeniami.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🏪</div>
+                <h3>Nova Store</h3>
+                <p>
+                    Instaluj wirtualne aplikacje
+                    i rozszerzaj możliwości NovaOS.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🔄</div>
+                <h3>Aktualizacje</h3>
+                <p>
+                    System aktualizacji pozwala
+                    pobierać nowe wersje NovaOS.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">👤</div>
+                <h3>NovaMail</h3>
+                <p>
+                    Każda instalacja NovaOS posiada
+                    własne wirtualne konto NovaMail.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===== POBIERANIE ===== -->
+
+    <section id="download" class="download">
+
+        <h2 class="section-title">
+            Pobierz NovaOS
+        </h2>
+
+        <p class="version">
+            Najnowsza wersja: NovaOS 3.x
+        </p>
+
+        <div class="buttons">
+
+            <!-- TU PÓŹNIEJ WSTAWIMY PRAWDZIWY LINK -->
+
+            <a class="button primary" href="#">
+                ⬇ Pobierz NovaOS
+            </a>
+
+            <a class="button secondary"
+               href="https://github.com/"
+               target="_blank">
+                GitHub
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===== STOPKA ===== -->
+
+    <footer>
+
+        © 2026 NovaOS Project
+
+        <br><br>
+
+        NovaOS jest wirtualnym systemem operacyjnym
+        działającym jako aplikacja.
+
+    </footer>
+
+</body>
+</html>
